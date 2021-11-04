@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Iniciar Sesion</h1>
+    <form th:action="@{/sesion/validar}" method="get">
+
+        <div style="display: inline-block;">
+            <label for="nombre">Nombre</label><br>
+            <input type="text" name="nombre" id="nombre" placeholder="nombre" required>
+        </div>
+        <div style="display: inline-block;">
+            <label for="pass">Contraseña</label><br>
+            <input type="password" name="pass" id="pass" placeholder="contraseña" required>
+        </div>
+       
+        <input type="submit" value="entrar">
+            
+    </form>
+
+    <br>
+    <p style="background-color: red;color:white;" th:text="${mensaje}"></p>
+</body>
+</html>
